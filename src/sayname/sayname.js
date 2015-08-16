@@ -14,22 +14,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var router_1 = require('angular2/router');
-var Home = (function () {
-    function Home(router) {
-        this.router = router;
-        this.message = 'Hi';
+var SayName = (function () {
+    function SayName() {
+        this.name = "John doe";
     }
-    Home = __decorate([
+    SayName.prototype.hello = function () {
+        alert(this.name);
+    };
+    SayName = __decorate([
         angular2_1.Component({
-            selector: 'home'
+            selector: 'say-name'
         }),
         angular2_1.View({
-            templateUrl: './src/home/home.html',
-            directives: [angular2_1.coreDirectives]
+            templateUrl: './src/sayname/sayname.html',
+            directives: [angular2_1.formDirectives]
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
-    ], Home);
-    return Home;
+        __metadata('design:paramtypes', [])
+    ], SayName);
+    return SayName;
 })();
-exports.Home = Home;
+exports.SayName = SayName;

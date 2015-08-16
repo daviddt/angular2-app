@@ -3,21 +3,19 @@
 /// <reference path="../../typings/angular2/ng2.d.ts" />
 /// <reference path="../../typings/webpack/webpack.d.ts" />
 
-import { Component, View, coreDirectives } from 'angular2/angular2';
-import { Router} from 'angular2/router';
-import { SayName } from '../sayname/sayname';
+import { Component, View, formDirectives } from 'angular2/angular2';
 
 @Component({
-	selector: 'about'
+	selector: 'say-name'
 })
 @View({
-	templateUrl: './src/about/about.html',
-	directives: [coreDirectives, SayName]
+	templateUrl: './src/sayname/sayname.html',
+	directives: [formDirectives]
 })
 
-export class About {
+export class SayName {
 	name: string;
-	constructor(public router: Router) {
+	constructor() {
 		this.name = "John doe";
 	}
 	hello() {

@@ -14,19 +14,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var angular2_2 = require('angular2/angular2');
 var router_1 = require('angular2/router');
+var sayname_1 = require('../sayname/sayname');
 var About = (function () {
     function About(router) {
         this.router = router;
+        this.name = "John doe";
     }
+    About.prototype.hello = function () {
+        alert(this.name);
+    };
     About = __decorate([
         angular2_1.Component({
             selector: 'about'
         }),
         angular2_1.View({
             templateUrl: './src/about/about.html',
-            directives: [angular2_2.coreDirectives]
+            directives: [angular2_1.coreDirectives, sayname_1.SayName]
         }), 
         __metadata('design:paramtypes', [router_1.Router])
     ], About);
