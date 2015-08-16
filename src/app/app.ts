@@ -21,8 +21,12 @@ import { About } from '../about/about';
 ])
 
 export class App {
-	constructor(public router: Router) {
+	constructor(public router: Router, public location: Location) {
 		this.router = router;
-		console.log(this.router);
-	};
+		this.location = location;
+	}
+	getLinkStyle(path) {
+        return this.location.path() === path;
+    }
+
 }

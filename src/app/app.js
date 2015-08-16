@@ -17,12 +17,15 @@ var router_1 = require('angular2/router');
 var home_1 = require('../home/home');
 var about_1 = require('../about/about');
 var App = (function () {
-    function App(router) {
+    function App(router, location) {
         this.router = router;
+        this.location = location;
         this.router = router;
-        console.log(this.router);
+        this.location = location;
     }
-    ;
+    App.prototype.getLinkStyle = function (path) {
+        return this.location.path() === path;
+    };
     App = __decorate([
         angular2_1.Component({
             selector: 'my-app'
@@ -36,7 +39,7 @@ var App = (function () {
             { path: '/home', as: 'home', component: home_1.Home },
             { path: '/about', as: 'about', component: about_1.About }
         ]), 
-        __metadata('design:paramtypes', [router_1.Router])
+        __metadata('design:paramtypes', [router_1.Router, router_1.Location])
     ], App);
     return App;
 })();
