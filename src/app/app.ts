@@ -21,10 +21,8 @@ import { About } from '../about/about';
 ])
 
 export class App {
-	router: Router;
 	constructor(public router: Router) {
 		this.router = router;
 		console.log(this.router);
 	};
 }
-
