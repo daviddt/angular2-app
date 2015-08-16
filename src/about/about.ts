@@ -16,11 +16,7 @@ import { SayName } from '../sayname/sayname';
 })
 
 export class About {
-	name: string;
+	message: string;
 	constructor(public router: Router) {
-		this.name = "John doe";
-	}
-	hello() {
-		alert(this.name);
 	}
 }

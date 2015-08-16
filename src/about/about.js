@@ -19,11 +19,7 @@ var sayname_1 = require('../sayname/sayname');
 var About = (function () {
     function About(router) {
         this.router = router;
-        this.name = "John doe";
     }
-    About.prototype.hello = function () {
-        alert(this.name);
-    };
     About = __decorate([
         angular2_1.Component({
             selector: 'about'

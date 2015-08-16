@@ -4,7 +4,7 @@
 /// <reference path="../../typings/webpack/webpack.d.ts" />
 
 import { Component, View, coreDirectives } from 'angular2/angular2';
-import { Router} from 'angular2/router';
+import { Router } from 'angular2/router';
 
 @Component({
 	selector: 'home'
